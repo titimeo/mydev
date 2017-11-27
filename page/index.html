@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOME</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/layout.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	<style>
+		body,html {margin: 0;position: relative;
+		font-family:  Arial, "sans-serif",Gotham, "Helvetica Neue", Helvetica,;
+		height: 100%;
+			display: block;
+		}
+
+		#d-sidebar{
+			height: 100%;
+			
+		}
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #3d3d3d;
+	
+   /* position: fixed;*/
+    height: 100%;
+	
+    overflow: auto;
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+   /* background-color: #474747!important;  child menu active*/
+	background-color: #303030;
+    color: white;
+	border-left: 3px #d2433a solid;
+	/* group active 424242  border 36c6d3*/
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: #303030;
+    color: white;
+}
+
+#dbody{
+			width: 100%;height: 100%;
+  position: absolute; /* to place it somewhere on the screen */
+  top: 51px;/* free space at top */
+			/*box-sizing: content-box;*/
+  bottom: 30px;
+		}
+#vheader{
+	height: 51px;	
+	top:-51px;
+	position: absolute;
+	background-color: #1f1f1f; 
+	}
+#divcontent {
+    margin-left: 15%;	
+	padding: 1px 16px;	
+	top: 0;
+	position: absolute;	
+	height: 100%;	
+	width: 85%;    
+}
+	#dfooter	{
+		margin: auto;
+		padding-left: 10px;
+		width: 100%;
+		background-color: #1f1f1f; 
+		height: 30px;
+		line-height: 30px;
+		position: absolute;		 
+		vertical-align: middle;
+		color: #fff;
+	}
+		
+#ilogout img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+	#pagewrapper{
+/* Firefox */
+height: -moz-calc(100% - 70px); /*assume i.e. your header above the wrapper is 50 and the footer bellow is 20*/
+/* WebKit */
+height: -webkit-calc(100% - 70px);
+/* Opera */
+height: -o-calc(100% - 70px);
+/* Standard */
+height: calc(100% - 70px);
+}
+		
+.container-3{
+  
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+	width: 95%;
+	height:50px;
+	border-bottom: 1px solid #484848;
+}
+ 
+.container-3 input#search{
+ width: 95%;
+  height:45px;
+	border: none;
+  background: #3d3d3d;  
+  font-size: 10pt;
+  float: left;
+  color: #262626;
+  padding-left: 45px;  
+  color: #fff;
+ outline-style: none;
+	margin-bottom: 0;
+
+}
+		
+	.container-3 .icon{
+  position: absolute;
+  line-height: 50px;
+  vertical-align: middle;
+  right: 17px;  
+  z-index: 1;
+  color: #4f5b66;
+   -webkit-transition: all .55s ease;
+  -moz-transition: all .55s ease;
+  -ms-transition: all .55s ease;
+  -o-transition: all .55s ease;
+  transition: all .55s ease;
+}
+	</style>
+  </head>
+  <body>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-1.11.3.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="js/bootstrap.js"></script>
+	<div id="dbody">	
+	
+	<div id="vheader">
+				
+		<img src="imgs/RYNAN-01.png" style="width: 9%; position: relative;
+top: 50%;
+transform: translateY(-50%);opacity: 0.6;
+    filter: alpha(opacity=100);" /> 
+		<!--<input type="text" />-->	   
+    	<!--<img style="position:absolute; top:0; bottom:0; right:0;margin:auto;" id="ilogout" src="imgs/log_out.png" />-->
+    	<!--<i class="glyphicon glyphicon-log-out" style="color: #fff;font-weight: 300"></i>-->
+     </div>
+     <div id="d-sidebar">    
+		<ul class="sidenav">
+		<li style="height: 70px;">
+		<div class="container-3">
+      <span class="icon"><i class="fa fa-search"></i></span>
+      <input type="search" id="search" placeholder="Search..." />
+  </div>
+		</li>
+  <li><a class="active" href="#home">Dashboard</a></li>
+  <li><a href="#news">Element Controls</a></li>
+  <li><a href="#contact">Table</a></li>
+  <li><a href="#about">Components</a></li>
+</ul>
+		</div>
+		<div id="divcontent">
+		content
+	  </div>
+	  <div id="dfooter">2017 &copy; mydev</div>
+	  </div>
+  </body>
+</html>
